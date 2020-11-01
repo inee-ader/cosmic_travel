@@ -1,0 +1,9 @@
+<h1><%= @scientist.name %> Details</h1>
+<h3>Field of Study: <%= @scientist.field_of_study%></h3>
+<ul>
+    <% @scientist.planets.each do |planet|%>
+    <li><%= planet.name %></li>
+    <% end %>
+</ul>
+<button><%= link_to "Edit", edit_scientist_path(@scientist) %></button>
+<%= button_to "Delete", @scientist, method: :delete, data: {confirm: "Are you sure?"} %> 

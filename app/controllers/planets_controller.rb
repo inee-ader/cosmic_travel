@@ -1,4 +1,5 @@
 class PlanetsController < ApplicationController
+  
   before_action :set_planet, only: [:show, :edit, :update, :destroy]
 
   # GET /planets
